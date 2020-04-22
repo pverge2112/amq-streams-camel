@@ -6,7 +6,7 @@
     <bean id="printEvents" class="org.example.fis.KafkaProcessor"/>
     <camelContext id="camel-kafka-poc" xmlns="http://camel.apache.org/schema/spring">
         <route id="producer-route">
-            <from id="route-timer" uri="timer:foo?period=20000"/>
+            <from id="route-timer" uri="timer:foo?period=5000"/>
             <setBody id="_setBody1">
                 <simple>Message Body: ${date:now:yyyy-MM-dd HH:mm:ss}</simple>
             </setBody>
